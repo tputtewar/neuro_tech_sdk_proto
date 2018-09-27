@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project neuro_application">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.workspace}/JarFile"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/insideout.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.neuro.app.NeuroApplication"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.buildfile}/target/classes"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/commons-io.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/devices-sample.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/jna.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-biometrics-client-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-biometrics-client.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-biometrics-gui-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-biometrics-gui.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-biometrics-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-biometrics.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-core-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-core.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-devices-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-devices-virtual-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-devices-virtual.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-devices.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-gui-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-gui.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-licensing-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-licensing.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-media-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-media-processing-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-media-processing.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-media.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-surveillance-javadoc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/neurotec-surveillance.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/samples-utils.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/simple-faces-sample.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/simple-surveillance-sample.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/lenovo/.m2/repository/mysql/mysql-connector-java/8.0.12/mysql-connector-java-8.0.12.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="C:/Users/lenovo/.m2/repository/com/google/protobuf/protobuf-java/2.6.0/protobuf-java-2.6.0.jar"/>
+        </jar>
+    </target>
+</project>
